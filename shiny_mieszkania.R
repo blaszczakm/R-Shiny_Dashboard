@@ -72,7 +72,7 @@ ui<- dashboardPage(
 
 server<-function(input,output,session){
   
-  dane <- read.csv("https://raw.githubusercontent.com/blaszczakm/Web_Scrapping/master/mieszkania_otodom.csv",sep=",")
+  dane <- read.csv("https://raw.githubusercontent.com/blaszczakm/R-Shiny_Dashboard/master/mieszkania_otodom.csv",sep=",")
   output$surowe_dane <- renderTable({head(dane,10)})
   
   output$infob1<-renderInfoBox(infoBox("Ilość ogłoszeń",nrow(dane), color = "red"))
